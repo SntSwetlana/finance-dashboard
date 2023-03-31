@@ -175,7 +175,7 @@ const Row1 = () => {
             style={{ fontSize: "10px"}}
             />
             <Tooltip />
-            <Legend hight={20} wrapperStyle={{
+            <Legend height={20} wrapperStyle={{
               margin:"0 0 10px 0",
             }} />
             <Line 
