@@ -1,9 +1,7 @@
 import FlexBetween from '@/components/FlexBetween';
-import { useTheme } from '@emotion/react';
-import { Box } from '@mui/system';
 import React, { useState } from 'react'
 import PixIcon from '@mui/icons-material/Pix';
-import { Typography } from '@mui/material';
+import { Box, Typography, useTheme } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 type Props = {}

@@ -2,10 +2,8 @@ import BoxHeader from '@/components/BoxHeader';
 import DashboardBox from '@/components/DashboardBox'
 import FlexBetween from '@/components/FlexBetween';
 import { useGetKpisQuery, useGetProductsQuery, useGetTransactionsQuery } from '@/state/api';
-import { Box, useTheme } from '@mui/material';
-import Typography from '@mui/material/Typography';
-import { GridCellParams } from '@mui/x-data-grid';
-import { DataGrid } from '@mui/x-data-grid/DataGrid';
+import { Box, Typography, useTheme } from '@mui/material';
+import { DataGrid, GridCellParams } from '@mui/x-data-grid';
 import React, { useMemo } from 'react'
 import { Cell, Pie, PieChart } from 'recharts';
 
@@ -71,16 +69,15 @@ const Row3 = () => {
       field: "amount",
       headerName: "Amount",
       flex: 0.35,
-      renderCell: (params: GridCellParams) => params.value,
+      renderCell: (params: GridCellParams) => `$${params.value}`,
     },
     {
       field: "productIds",
       headerName: "Count",
       flex: 0.1,
-      renderCell: (params: GridCellParams) => params.value.length,
+      renderCell: (params: GridCellParams) => (params.value as Array<string>).length,
     },
-
-  ]
+  ];
   console.log("transactionsData:", transactionData);
   return (
     <>
